@@ -214,9 +214,9 @@
             "sources" : [
                 {
                     "type" : "git",
-                    "url" : "https://gitlab.com/tabos/libcapi.git",
-                    "tag" : "v3.1.0",
-                    "commit" : "42fa77d589d6eb45b7e811bb163dcf34e16e4df4"
+                    "url" : "https://gitlab.com/tabos/libcapi.git",,
+                    "tag" : "v3.2.1",
+                    "commit" : "1b75939b8a48d806111b2cab8948b2c2004a453c"
                 }
             ]
         },
