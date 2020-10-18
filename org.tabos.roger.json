@@ -242,8 +242,8 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.com/tabos/librm.git",
-                    "tag" : "v2.1.2",
-                    "commit" : "b6cb29874e1e3fe629220391676778b82da9bcff"
+                    "tag" : "v2.1.3",
+                    "commit" : "b920b1f1ffe2445fa20975dd9ef0313a74f0ed8f"
                  }
             ]
         },
@@ -258,8 +258,8 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.com/tabos/rogerrouter.git",
-                    "tag" : "v2.1.6",
-                    "commit" : "d9015afcbdefb8e069b290a92235e87c2692bd8d"
+                    "tag" : "v2.2.0",
+                    "commit" : "95184586d29b6d9145db8846ebe64c976efc74c0"
                 }
             ]
         }
