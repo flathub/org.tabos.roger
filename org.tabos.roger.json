@@ -197,7 +197,8 @@
                 "-DENABLE_EXAMPLES=OFF",
                 "-DENABLE_GOA=OFF",
                 "-DENABLE_WEATHER=OFF",
-                "-DWITH_LIBDB=OFF"
+                "-DWITH_LIBDB=OFF",
+                "-DENABLE_CANBERRA=OFF"
             ],
             "buildsystem": "cmake",
             "sources" : [
