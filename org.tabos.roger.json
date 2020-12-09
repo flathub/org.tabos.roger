@@ -101,8 +101,7 @@
                 },
                 {
                     "type": "patch",
-                    "path": "freetype-fix.patch",
-                    "only-arches": [ "aarch64" ]
+                    "path": "freetype-fix.patch"
                 },
                 {
                     "type": "shell",
