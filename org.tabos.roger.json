@@ -100,6 +100,11 @@
                     "sha256" : "fc0f1fbacd3610c67a9f080487a0e021f14390c38a4b4df9723e2bdf2b90b619"
                 },
                 {
+                    "type": "patch",
+                    "path": "freetype-fix.patch",
+                    "only-arches": [ "aarch64" ]
+                },
+                {
                     "type": "shell",
                     "commands": [
                            "rm -rf freetype lcms2mt jpeg libpng openjpeg zlib"
@@ -229,6 +234,12 @@
                     "url" : "https://gitlab.com/tabos/spandsp.git",
                     "tag" : "0.0.6pre21",
                     "commit" : "68455c2d0d56def0443ba2ae7df0e82e3a5fa5bb"
+                },
+                {
+                    "type": "shell",
+                    "commands": [
+                        "cp -p /usr/share/automake-*/config.{sub,guess} config"
+                    ]
                 }
             ]
         },
