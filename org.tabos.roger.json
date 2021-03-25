@@ -213,7 +213,7 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.com/tabos/rogerrouter.git",
-                    "tag" : "v2.4.0",
+                    "tag" : "2.4.0",
                     "commit" : "30eae915202f09c82f20b333a6f6854d8a763559"
                 }
             ]
