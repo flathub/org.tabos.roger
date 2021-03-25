@@ -1,7 +1,7 @@
 {
     "app-id" : "org.tabos.roger",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "3.38",
+    "runtime-version" : "40",
     "sdk" : "org.gnome.Sdk",
     "command" : "roger",
     "finish-args" : [
@@ -13,9 +13,6 @@
         "--socket=pulseaudio",
         "--talk-name=org.freedesktop.secrets",
         "--filesystem=xdg-run/keyring",
-        "--talk-name=org.kde.StatusNotifierWatcher",
-        "--talk-name=com.canonical.indicator.application",
-        "--talk-name=org.gnome.OnlineAccounts",
         "--talk-name=org.gnome.evolution.dataserver.AddressBook9",
         "--talk-name=org.gnome.evolution.dataserver.Calendar7",
         "--talk-name=org.gnome.evolution.dataserver.Sources5",
@@ -48,8 +45,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/gssdp/1.2/gssdp-1.2.1.tar.xz",
-                    "sha256" : "6b57b79a96e229367981b6f00474e4bbc795909a2d3160c748cba3395b3556d3"
+                    "url" : "https://download.gnome.org/sources/gssdp/1.2/gssdp-1.2.3.tar.xz",
+                    "sha256" : "a263dcb6730e3b3dc4bbbff80cf3fab4cd364021981d419db6dd5a8e148aa7e8"
                 }
             ]
         },
@@ -62,8 +59,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/gupnp/1.2/gupnp-1.2.1.tar.xz",
-                    "sha256" : "a9aa557eff415598e05999d0ab122f202a978ff827688d3f951023117a315f5e"
+                    "url" : "https://download.gnome.org/sources/gupnp/1.2/gupnp-1.2.4.tar.xz",
+                    "sha256" : "f7a0307ea51f5e44d1b832f493dd9045444a3a4e211ef85dfd9aa5dd6eaea7d1"
                 }
             ]
         },
@@ -90,74 +87,21 @@
             "cleanup" : [
                 "/bin",
                 "/share/man",
-                "/share/ghostscript/9.27/doc/",
-                "/share/ghostscript/9.27/examples"
+                "/share/ghostscript/9.53/doc/",
+                "/share/ghostscript/9.53/examples"
             ],
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs927/ghostscript-9.27.tar.xz",
-                    "sha256" : "fc0f1fbacd3610c67a9f080487a0e021f14390c38a4b4df9723e2bdf2b90b619"
-                },
-                {
-                    "type": "patch",
-                    "path": "freetype-fix.patch"
+                    "url" : "https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs9533/ghostscript-9.53.3.tar.xz",
+                    "sha256" : "9c9f5bc85b6c7eb08368c05b1e3339f7aaf9677ddca710c6283f872d55e2a234"
                 },
                 {
                     "type": "shell",
                     "commands": [
-                           "rm -rf freetype lcms2mt jpeg libpng openjpeg zlib"
+                           "rm -rf lcms2mt jpeg libpng openjpeg zlib",
+                           "cp -p /usr/share/automake-*/config.{sub,guess} freetype/builds/unix/"
                     ]
-                }
-            ]
-        },
-        {
-            "name" : "liboauth",
-            "config-opts" : [
-               "--enable-nss"
-            ],
-            "sources" : [
-                {
-                    "type" : "archive",
-                    "url" : "http://netix.dl.sourceforge.net/project/liboauth/liboauth-1.0.3.tar.gz",
-                    "sha256" : "0df60157b052f0e774ade8a8bac59d6e8d4b464058cc55f9208d72e41156811f"
-                }
-            ]
-        },
-        {
-            "name" : "libgdata",
-            "buildsystem" : "meson",
-            "config-opts" : [
-                "-Dalways_build_tests=false",
-                "-Dgoa=disabled",
-                "-Dgtk_doc=false",
-                "-Dintrospection=false",
-                "-Dvapi=false",
-                "-Dinstalled_tests=false"
-            ],
-            "sources" : [
-                {
-                    "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/libgdata/0.17/libgdata-0.17.11.tar.xz",
-                    "sha256" : "6b9917122e4def6e6f78bcb660e49e146540832e296abcb5cde99829a04ea986"
-                }
-            ]
-        },
-        {
-            "name" : "poppler",
-            "buildsystem": "cmake",
-            "config-opts" : [
-                "-DENABLE_SPLASH=OFF",
-                "-DENABLE_CPP=OFF",
-                "-DENABLE_LIBCURL=OFF",
-                "-DBUILD_GTK_TESTS=OFF",
-                "-DENABLE_LIBOPENJPEG=none"
-            ],
-            "sources" : [
-                {
-                    "type" : "archive",
-                    "url" : "https://poppler.freedesktop.org/poppler-0.80.0.tar.xz",
-                    "sha256" : "4d3ca6b79bc13b8e24092e34f83ef5f387f3bb0bbd7359a6c078e09c696d104f"
                 }
             ]
         },
@@ -174,8 +118,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://github.com/libical/libical/releases/download/v3.0.6/libical-3.0.6.tar.gz",
-                    "sha256" : "5c8a21c2b732ece4a33e5c862970b4f35a8548bbcda50de5695f6fc211ac4d97"
+                    "url" : "https://github.com/libical/libical/releases/download/v3.0.9/libical-3.0.9.tar.gz",
+                    "sha256" : "bd26d98b7fcb2eb0cd5461747bbb02024ebe38e293ca53a7dfdcb2505265a728"
                 }
             ]
         },
@@ -208,8 +152,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/evolution-data-server/3.34/evolution-data-server-3.34.0.tar.xz",
-                    "sha256" : "fb9db0a824ae01ecc63c82cf8e503fecdcba7118b919f04bda7d8d91f3e486cf"
+                    "url" : "https://download.gnome.org/sources/evolution-data-server/3.38/evolution-data-server-3.38.4.tar.xz",
+                    "sha256" : "ac53f16b2d51f3e7ff8025f9ca19f4a2d4ce3841d72ae9fe2bb897dc8099d705"
                 }
             ]
         },
@@ -220,8 +164,8 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.com/tabos/libcapi.git",
-                    "tag" : "v3.2.2",
-                    "commit" : "7de497e8a74640aba8f108eb3eba3a26a1a24a3d"
+                    "tag" : "v3.2.3",
+                    "commit" : "9e7eb7789fef8ce712aa64f290aacbbececf2dfe"
                 }
             ]
         },
@@ -253,28 +197,9 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.com/tabos/librm.git",
-                    "tag" : "v2.1.4",
-                    "commit" : "4f49dbeaf388664e7da4d49d541dcfa4219014f6"
+                    "tag" : "2.2.2",
+                    "commit" : "939dc70473152a5278db68e582e64c879c0649ea"
                  }
-            ]
-        },
-        {
-            "name" : "libhandy",
-            "buildsystem" : "meson",
-            "config-opts" : [
-                "-Dexamples=false",
-                "-Dglade_catalog=disabled",
-                "-Dintrospection=disabled",
-                "-Dtests=false",
-                "-Dvapi=false"
-            ],
-            "sources" : [
-                {
-                    "type" : "git",
-                    "url" : "https://gitlab.gnome.org/GNOME/libhandy.git",
-                    "tag" : "1.0.0",
-                    "commit" : "94313c206258860b2428712e7ece1d02c5177857"
-                }
             ]
         },
         {
@@ -288,8 +213,8 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.com/tabos/rogerrouter.git",
-                    "tag" : "v2.2.1",
-                    "commit" : "681ba39caaca074aaff6412bf0d32347add86fb5"
+                    "tag" : "v2.4.0",
+                    "commit" : "30eae915202f09c82f20b333a6f6854d8a763559"
                 }
             ]
         }
