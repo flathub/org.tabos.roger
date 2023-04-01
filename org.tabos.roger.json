@@ -1,7 +1,7 @@
 {
     "app-id" : "org.tabos.roger",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "42",
+    "runtime-version" : "43",
     "sdk" : "org.gnome.Sdk",
     "command" : "roger",
     "finish-args" : [
@@ -137,6 +137,7 @@
                 "-DENABLE_GOOGLE_AUTH=OFF",
                 "-DENABLE_UOA=OFF",
                 "-DENABLE_GOOGLE=OFF",
+                "-DENABLE_OAUTH2=OFF",
                 "-DENABLE_VALA_BINDINGS=OFF",
                 "-DWITH_OPENLDAP=OFF",
                 "-DENABLE_INTROSPECTION=OFF",
