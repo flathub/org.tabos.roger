@@ -5,7 +5,7 @@
     "sdk" : "org.gnome.Sdk",
     "command" : "roger",
     "finish-args" : [
-        "--socket=x11",
+        "--socket=fallback-x11",
         "--share=ipc",
         "--socket=wayland",
         "--share=network",
@@ -110,7 +110,7 @@
             "cleanup" : [
                 "/lib/cmake"
             ],
-            "buildsystem": "cmake",
+            "buildsystem": "cmake-ninja",
             "config-opts" : [
                 "-DCMAKE_INSTALL_LIBDIR:PATH=/app/lib",
                 "-DBUILD_SHARED_LIBS:BOOL=ON"
@@ -149,7 +149,7 @@
                 "-DWITH_LIBDB=OFF",
                 "-DENABLE_CANBERRA=OFF"
             ],
-            "buildsystem": "cmake",
+            "buildsystem": "cmake-ninja",
             "sources" : [
                 {
                     "type" : "archive",
