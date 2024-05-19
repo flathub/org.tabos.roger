@@ -1,0 +1,49 @@
+diff --git a/data/org.tabos.roger.appdata.xml.in b/data/org.tabos.roger.appdata.xml.in
+index 59ed757..da248b4 100644
+--- a/data/org.tabos.roger.appdata.xml.in
++++ b/data/org.tabos.roger.appdata.xml.in
+@@ -66,21 +66,6 @@
+     <release version="2.1.3" date="2018-10-16" urgency="medium" />
+     <release version="2.1.2" date="2018-10-16" urgency="medium" />
+     <release version="2.1.1" date="2018-10-15" urgency="medium" />
+-    <release version="2.1.0" date="2018-10-07" urgency="high">
+-      <description>
+-        Official release of 2.1.0
+-      </description>
+-    </release>
+-    <release version="2.0.0" date="2018-05-13">
+-      <description>
+-        Official release of 2.0.0
+-      </description>
+-    </release>
+-    <release version="1.92.0" date="2017-12-01">
+-      <description>
+-        Beta-Release for upcoming 2.0.
+-      </description>
+-    </release>
+   </releases>
+   <categories>
+     <category>Network</category>
+@@ -100,13 +85,14 @@
+     <kudo>ModernToolkit</kudo>
+     <kudo>Notifications</kudo>
+   </kudos>
+-  <url type="homepage">https://www.tabos.org</url>
+-  <update_contact>jan.brummer@tabos.org</update_contact>
+   <developer_name>Jan-Michael Brummer</developer_name>
+-  <url type="bugtracker">https://www.tabos.org/forum/</url>
+-  <url type="donation">https://www.tabos.org/</url>
+-  <url type="help">https://www.tabos.org/</url>
+-  <url type="faq">https://www.tabos.org/</url>
++  <developer id="org.tabos">
++    <name>Jan-Michael Brummer</name>
++  </developer>
++  <url type="homepage">https://www.tabos.org/projects/rogerrouter/</url>
++  <url type="bugtracker">https://gitlab.com/tabos/rogerrouter/-/issues</url>
++  <url type="vcs-browser">https://gitlab.com/tabos/rogerrouter</url>
++  <url type="translate">https://gitlab.com/tabos/rogerrouter/-/tree/master/po</url>
+   <developer_name>Jan-Michael Brummer</developer_name>
+   <update_contact>jan.brummer_AT_tabos.org</update_contact>
+   <translation type="gettext">roger</translation>
+--
+libgit2 1.7.2
