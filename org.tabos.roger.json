@@ -1,7 +1,7 @@
 {
     "app-id" : "org.tabos.roger",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "43",
+    "runtime-version" : "46",
     "sdk" : "org.gnome.Sdk",
     "command" : "roger",
     "finish-args" : [
@@ -36,6 +36,7 @@
         "/share/gir-1.0"
     ],
     "modules" : [
+        "shared-modules/libsoup/libsoup-2.4.json",
         {
             "name" : "gssdp",
             "buildsystem" : "meson",
@@ -198,8 +199,8 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.com/tabos/librm.git",
-                    "tag" : "2.2.3",
-                    "commit" : "1a743b36bb9d5555a84e4e858eadefde5c8f7dc1"
+                    "tag" : "2.3.4",
+                    "commit" : "4ebbae3e4913d8729e876628ccc430a7a196793a"
                  }
             ]
         },
@@ -214,8 +215,12 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.com/tabos/rogerrouter.git",
-                    "tag" : "2.4.2",
-                    "commit" : "a9dfa5d42f197d3a5c6250293ece28b125062b5f"
+                    "tag" : "2.4.90",
+                    "commit" : "1746021c72c143ced58e20d89e25b203d370fb0d"
+                },
+                {
+                    "type" : "patch",
+                    "path" : "fix_appdata.patch"
                 }
             ]
         }
