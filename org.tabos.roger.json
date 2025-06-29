@@ -1,7 +1,7 @@
 {
     "app-id" : "org.tabos.roger",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "46",
+    "runtime-version" : "48",
     "sdk" : "org.gnome.Sdk",
     "command" : "roger",
     "finish-args" : [
@@ -43,11 +43,19 @@
             "cleanup" : [
                 "/bin"
             ],
+	    "config-opts" : [
+                "-Dgtk_doc=false",
+                "-Dsniffer=false",
+                "-Dintrospection=false",
+                "-Dvapi=false",
+                "-Dexamples=false",
+                "-Dmanpages=false"
+            ],
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/gssdp/1.2/gssdp-1.2.3.tar.xz",
-                    "sha256" : "a263dcb6730e3b3dc4bbbff80cf3fab4cd364021981d419db6dd5a8e148aa7e8"
+                    "url" : "https://download.gnome.org/sources/gssdp/1.6/gssdp-1.6.4.tar.xz",
+                    "sha256" : "ff97fdfb7f561d3e6813b4f6a2145259e7c2eff43cc0e63f3fd031d0b6266032"
                 }
             ]
         },
@@ -57,11 +65,17 @@
             "cleanup" : [
                 "/bin"
             ],
+	    "config-opts" : [
+                "-Dintrospection=false",
+                "-Dvapi=false",
+                "-Dgtk_doc=false",
+                "-Dexamples=false"
+            ],
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/gupnp/1.2/gupnp-1.2.4.tar.xz",
-                    "sha256" : "f7a0307ea51f5e44d1b832f493dd9045444a3a4e211ef85dfd9aa5dd6eaea7d1"
+                    "url" : "https://download.gnome.org/sources/gupnp/1.6/gupnp-1.6.9.tar.xz",
+                    "sha256" : "2edb6ee3613558e62f538735368aee27151b7e09d4e2e2c51606833da801869b"
                 }
             ]
         },
@@ -154,8 +168,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/evolution-data-server/3.38/evolution-data-server-3.38.4.tar.xz",
-                    "sha256" : "ac53f16b2d51f3e7ff8025f9ca19f4a2d4ce3841d72ae9fe2bb897dc8099d705"
+                    "url" : "https://download.gnome.org/sources/evolution-data-server/3.56/evolution-data-server-3.56.2.tar.xz",
+                    "sha256" : "df4ec29950f29a76eac6fbe0f814c48d2cef7d3fdb905002a4a883dd761ce93c"
                 }
             ]
         },
@@ -199,8 +213,7 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.com/tabos/librm.git",
-                    "tag" : "2.3.4",
-                    "commit" : "4ebbae3e4913d8729e876628ccc430a7a196793a"
+                    "commit" : "8517ef7e6c530952b71636296da290afab60e4c5"
                  }
             ]
         },
@@ -215,12 +228,7 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.com/tabos/rogerrouter.git",
-                    "tag" : "2.4.90",
-                    "commit" : "1746021c72c143ced58e20d89e25b203d370fb0d"
-                },
-                {
-                    "type" : "patch",
-                    "path" : "fix_appdata.patch"
+                    "commit" : "8c754a64fcc45ed8a07570f37acdb2b312856fa1"
                 }
             ]
         }
